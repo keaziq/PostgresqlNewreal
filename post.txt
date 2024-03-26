@@ -8,3 +8,5 @@
 задать пароль для пользователя postgres - \password postgres
 создаем нового пользователя на сервере PostgreSQL -   create user info_comp with password '123456';
 создадим базу данных - create database test_db;
+дадим права на управление базой данных  новому пользователю - grant all privileges on database test_db to info_comp;
+подключимся к PostgreSQL от имени нового пользователя - psql -h localhost test_db info_comp
