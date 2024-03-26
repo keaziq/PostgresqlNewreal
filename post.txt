@@ -10,3 +10,5 @@
 создадим базу данных - create database test_db;
 дадим права на управление базой данных  новому пользователю - grant all privileges on database test_db to info_comp;
 подключимся к PostgreSQL от имени нового пользователя - psql -h localhost test_db info_comp
+#listen_addresses = 'localhost' -  listen_addresses = '*'
+разрешим подключение из сети - /etc/postgresql/13/main/pg_hba.conf
