@@ -1,1 +1,10 @@
-
+подключения репозитория, которая создает файл в источниках с адресом нужного репозитория - sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+импортировать ключ подписи репозитория - wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+обновить список пакетов в системе - apt-get update
+установка PostgresQL - apt-get -y install postgresql
+проверка установки - systemctl status postgresql
+Создание пользователя и базы данных в PostgreSQL - su - postgres
+консоль для PostgreSQL - psql
+задать пароль для пользователя postgres - \password postgres
+создаем нового пользователя на сервере PostgreSQL -   create user info_comp with password '123456';
+создадим базу данных - create database test_db;
